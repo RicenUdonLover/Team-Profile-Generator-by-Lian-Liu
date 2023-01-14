@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const teamBuilder = require('./teamBuilder.js')
+const promptTeamMember = require('./teamBuilder.js')
 const Manager = function(name, id, email, office) {
     this.role = 'Manager'
     this.name = name
@@ -33,7 +33,7 @@ function promptTeamManager() {
     ]).then(answers => {
        const {name, id, email, officeNumber} = answers
        const teamManager = new Manager(name, id, email, officeNumber)
-       teamBuilder()
+       promptTeamMember()
     });
 }
 

@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const teamBuilder = require('./teamBuilder.js')
+const promptTeamMember = require('./teamBuilder.js')
 const Engineer = function (name, id, email, github) {
     this.role = 'Engineer'
     this.name = name
@@ -7,7 +7,7 @@ const Engineer = function (name, id, email, github) {
     this.email = email
     this.githubUsername = github
 }
-function promptEngineer() {
+function promptEngineer(callback) {
     inquirer.prompt([
         {
             type: "input",
@@ -32,7 +32,7 @@ function promptEngineer() {
     ]).then(answers => {
         const {name, id, email, github} = answers
         const engineer = new Engineer (name, id, email, github)
-        teamBuilder()
+        callback()
     });
 }
 

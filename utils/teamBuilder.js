@@ -13,10 +13,10 @@ function promptTeamMember() {
     ]).then(answers => {
         switch(answers.role) {
             case "Engineer":
-                promptEngineer();
+                promptEngineer(promptTeamMember);
                 break;
             case "Intern":
-                promptIntern();
+                promptIntern(promptTeamMember);
                 break;
             default:
                 // generateHTML();
