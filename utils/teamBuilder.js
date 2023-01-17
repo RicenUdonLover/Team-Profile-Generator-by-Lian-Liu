@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const promptEngineer = require('./engineer.js');
 const promptIntern = require('./intern.js');
-
 function promptTeamMember() {
     inquirer.prompt([
         {
@@ -19,6 +18,7 @@ function promptTeamMember() {
                 promptIntern(promptTeamMember);
                 break;
             default:
+                // console.log(team)
                 // generateHTML();
                 break
         }

@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 const promptTeamMember = require('./teamBuilder.js')
+const addToTeam = require('./addToTeam.js')
+
 const Engineer = function (name, id, email, github) {
     this.role = 'Engineer'
     this.name = name
@@ -32,6 +34,8 @@ function promptEngineer(callback) {
     ]).then(answers => {
         const {name, id, email, github} = answers
         const engineer = new Engineer (name, id, email, github)
+        console.log(engineer)
+        addToTeam('./assets/db/team.json', engineer)
         callback()
     });
 }

@@ -1,3 +1,3 @@
-const inquirer = require("inquirer");
+// const inquirer = require("inquirer");
 const promptTeamManager = require('./utils/manager')
 promptTeamManager()
