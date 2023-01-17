@@ -7,7 +7,7 @@ const addToTeam = (file, content) => {
       } else {
         const parsedData = JSON.parse(data);
         parsedData.push(content);
-        fs.writeFile(file, parsedData);
+        fs.writeFile(file, parsedData, (err) => err? console.error : console.log(`${parsedData} was logged to ${file}.`) );
       }
     });
   };
