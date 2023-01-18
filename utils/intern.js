@@ -35,7 +35,7 @@ function promptIntern(callback) {
     ]).then(answers => {
         const {name, id, email, school} = answers
         const intern = new Intern (name, id, email, school)
-        console.log(intern)
+        // console.log(intern)
         addToTeam('./assets/db/team.json', intern)
 
         callback()

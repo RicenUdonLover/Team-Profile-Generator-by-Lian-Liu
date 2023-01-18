@@ -34,7 +34,7 @@ function promptTeamManager() {
     ]).then(answers => {
        const {name, id, email, officeNumber} = answers
        const manager = new Manager(name, id, email, officeNumber)
-       console.log(manager)
+    //    console.log(manager)
        addToTeam('./assets/db/team.json', manager)
        promptTeamMember()
     });

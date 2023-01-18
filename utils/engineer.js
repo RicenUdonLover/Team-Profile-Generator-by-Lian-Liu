@@ -34,7 +34,7 @@ function promptEngineer(callback) {
     ]).then(answers => {
         const {name, id, email, github} = answers
         const engineer = new Engineer (name, id, email, github)
-        console.log(engineer)
+        // console.log(engineer)
         addToTeam('./assets/db/team.json', engineer)
         callback()
     });
