@@ -1,3 +1,4 @@
+const { log } = require('console');
 const fs = require('fs')
 
 const addToTeam = (file, content) => {
@@ -7,8 +8,10 @@ const addToTeam = (file, content) => {
       } else {
         console.log(`reading content from ${file}...`)
         const parsedData = JSON.parse(data);
+        // console.log(10, parsedData)
         parsedData.push(content);
-        fs.writeFile(file, parsedData, (err) => err? console.error : console.log(`${parsedData} was logged to ${file}.`) );
+        // console.log(13, JSON.stringify(parsedData));
+        fs.writeFile(file, JSON.stringify(parsedData), (err) => err? console.error(err) : console.log(`${parsedData} was logged to ${file}.`) );
       }
     });
   };
