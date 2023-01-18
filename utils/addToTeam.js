@@ -5,6 +5,7 @@ const addToTeam = (file, content) => {
       if (err) {
         console.error(err);
       } else {
+        console.log(`reading content from ${file}...`)
         const parsedData = JSON.parse(data);
         parsedData.push(content);
         fs.writeFile(file, parsedData, (err) => err? console.error : console.log(`${parsedData} was logged to ${file}.`) );
