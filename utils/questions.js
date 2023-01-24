@@ -1,5 +1,4 @@
-
-export const managerQuestions = [
+const managerQuestions = [
         {
             type: "input",
             name: "name",
@@ -22,7 +21,7 @@ export const managerQuestions = [
         }
     ]
 
-export const buildTeam = [
+const buildTeam = [
     {
         type: "list",
         name: "role",
@@ -31,7 +30,7 @@ export const buildTeam = [
     }
 ]
 
-export const engineerQuestions = [
+const engineerQuestions = [
     {
         type: "input",
         name: "name",
@@ -54,7 +53,7 @@ export const engineerQuestions = [
     }
 ]
 
-export const internQuestions = [
+const internQuestions = [
     {
         type: "input",
         name: "name",
@@ -76,3 +75,5 @@ export const internQuestions = [
         message: "Enter intern's school:"
     }
 ]
+
+module.exports = { managerQuestions, buildTeam, engineerQuestions, internQuestions }
