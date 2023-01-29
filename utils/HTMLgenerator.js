@@ -11,8 +11,8 @@ const generateHTML = (team) => {
       <title>My Team</title>
   </head>
     <body class="bg-light">
-        <div class="container my-5">
-          <header class="text-center bg-primary text-white p-4">
+        <div class="container">
+          <header class="text-center bg-primary text-white p-4 my-5">
               <h1 class="mb-5">${team[0].name}'s Team</h1>
           </header>
           <div class="row">`;
@@ -44,7 +44,7 @@ const generateHTML = (team) => {
     html += `
             </div>
             <footer class="text-center mt-5 bg-primary text-white p-4">
-              <p>2023 Made by <a href="https://github.com/RicenUdonLover" target="_blank">Lian Liu</a></p>
+              <p>2023 Made by <a class="text-white" href="https://github.com/RicenUdonLover" target="_blank">Lian Liu</a></p>
             </footer>
         </div>
     </body>
