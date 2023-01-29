@@ -13,7 +13,7 @@ const generateHTML = (team) => {
     <body class="bg-light">
         <div class="container">
           <header class="text-center bg-primary text-white p-4 my-5">
-              <h1 class="mb-5">${team[0].name}'s Team</h1>
+              <h1>${team[0].name}'s Team</h1>
           </header>
           <div class="row">`;
   
