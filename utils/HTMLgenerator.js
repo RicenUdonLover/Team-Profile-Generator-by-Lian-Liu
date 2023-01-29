@@ -1,39 +1,50 @@
+const fs = require("fs");
 
-function generateManager(manager) {
-const {name, id, email, officeNumber} = manager
-return `
+const generateHTML = (team) => {
+  let html = `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <title>My Team</title>
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">`;
 
-`
+  for (const member of team) {
+    html += `
+              <div class="col-sm-4">
+                  <div class="card">
+                      <div class="card-header">
+                          ${member.name} - ${member.getRole()}
+                      </div>
+                      <div class="card-body">
+                          <p>ID: ${member.id}</p>
+                          <p>Email: <a href="mailto:${member.email}">${member.email}</a>
+                          </p>`;
+    if (member.getRole() === "Manager") {
+      html += `<p>Office Number: ${member.officeNumber}</p>`;
+    } else if (member.getRole() === "Engineer") {
+      html += `<p>Github: <a href="https://github.com/${member.github}" target="_blank">${member.github}</a>
+      </p>`;
+    } else if (member.getRole() === "Intern") {
+      html += `<p>School: ${member.school}</p>`;
+    }
+    html += `
+                      </div>
+                  </div>
+              </div>`;
+  }
+  html += `
+          </div>
+      </div>
+  </body>
+  </html>`;
+
+  fs.writeFileSync("./dist/team.html", html);
 }
 
-
-
-
-function generateTeam(menber) {
-    const manager = renderLicenseSection(answers.license)
-    const readme =
-      `
-  # ${answers.title.trim()}
-  ## Description
-  ${answers.description.trim()}
-  ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
-  ## Installation
-  ${answers.installation.trim()}
-  ## Usage
-  ${answers.usage.trim()}
-  ${licenseSection}
-  ## Contributing
-  ${answers.contributing.trim()}
-  ## Tests
-  ${answers.tests.trim()}
-  ## Questions
-  For any questions, please contact me at [${answers.email.trim()}](mailto:${answers.email.trim()}). You can also check out my GitHub profile at [https://github.com/${answers.github.trim()}](https://github.com/${answers.github.trim()}).
-  `
-    return readme
-  };
+module.exports = generateHTML

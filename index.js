@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const { managerQuestions, buildTeam, engineerQuestions, internQuestions } = require('./utils/questions.js')
-const { Employee, Manager, Engineer, Intern } = require('./lib/classes.js');
+const { Manager, Engineer, Intern } = require('./lib/classes.js');
+const generateHTML = require('./utils/HTMLgenerator')
 const team = []
 
 
@@ -24,6 +25,7 @@ const createTeam = async function () {
                         const proceedAnswers = await askProceed(JSON.stringify(team));
                         if (proceedAnswers.proceed === "Create HTML") {
                             console.log(`creating HTML`)
+                            generateHTML(team)
                         }
                         break;
                     }
