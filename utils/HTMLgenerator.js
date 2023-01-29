@@ -26,12 +26,12 @@ const generateHTML = (team) => {
                         </div>
                         <div class="card-body">
                             <p>ID: ${member.id}</p>
-                            <p>Email: <a href="mailto:${employee.email}">${employee.email}</a>
+                            <p>Email: <a href="mailto:${member.email}">${member.email}</a>
                          </p>`;
       if (member.getRole() === "Manager") {
         html += `<p>Office Number: ${member.officeNumber}</p>`;
       } else if (member.getRole() === "Engineer") {
-        html += `<p>Github: <a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a>
+        html += `<p>Github: <a href="https://github.com/${member.github}" target="_blank">${member.github}</a>
         </p>`;
       } else if (member.getRole() === "Intern") {
         html += `<p>School: ${member.school}</p>`;
