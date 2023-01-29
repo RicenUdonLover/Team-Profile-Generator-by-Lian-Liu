@@ -22,5 +22,8 @@
   "homepage": "https://github.com/RicenUdonLover/Team-Profile-Generator-by-Lian-Liu#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1"
   }
 }
