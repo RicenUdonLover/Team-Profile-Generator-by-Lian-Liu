@@ -10,7 +10,10 @@ const generateHTML = (team) => {
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
       <title>My Team</title>
   </head>
-  <body>
+  <body class="bg-light">
+      <header class="bg-primary text-white p-4">
+        <h1 class="text-center">My Team</h1>
+      </header>
       <div class="container">
           <div class="row">`;
   for (const member of team) {
