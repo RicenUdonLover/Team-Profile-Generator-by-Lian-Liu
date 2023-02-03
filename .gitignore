@@ -1,3 +1,4 @@
-DS_STORE
+.DS_STORE
 node_modules
 package-lock.json
+Challenge10.md
