@@ -8,7 +8,12 @@ const managerQuestions = [
         {
             type: "input",
             name: "id",
-            message: "Enter team manager's employee ID:"
+            message: "Enter team manager's employee ID:",
+            validate: id => {
+                id.length !== 0 || "ID cannot be empty."
+                const isInteger = Number.isInteger(parseInt(id))
+                return isInteger ? true : "ID must be an integer.";
+            }
         },
         {
             type: "input",
