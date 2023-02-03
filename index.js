@@ -24,7 +24,7 @@ const createTeam = async function () {
                     } else {
                         const proceedAnswers = await askProceed(JSON.stringify(team));
                         if (proceedAnswers.proceed === "Create HTML") {
-                            console.log(`creating HTML`)
+                            console.log(`HTML file created! Please to to /dist to find the file.`)
                             generateHTML(team)
                         }
                         break;

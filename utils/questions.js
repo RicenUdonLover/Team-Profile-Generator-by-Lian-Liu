@@ -2,7 +2,8 @@ const managerQuestions = [
         {
             type: "input",
             name: "name",
-            message: "Enter team manager's name:"
+            message: "Enter team manager's name:",
+            validate: name => name.length !== 0 || "Name cannot be empty."
         },
         {
             type: "input",
@@ -34,7 +35,8 @@ const engineerQuestions = [
     {
         type: "input",
         name: "name",
-        message: "Enter engineer's name:"
+        message: "Enter engineer's name:",
+        validate: name => name.length !== 0 || "Name cannot be empty."
     },
     {
         type: "input",
@@ -57,7 +59,8 @@ const internQuestions = [
     {
         type: "input",
         name: "name",
-        message: "Enter intern's name:"
+        message: "Enter intern's name:",
+        validate: name => name.length !== 0 || "Name cannot be empty."
     },
     {
         type: "input",
