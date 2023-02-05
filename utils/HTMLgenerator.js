@@ -1,5 +1,22 @@
 const fs = require("fs");
 
+const sortTeam = team => {
+  var sortedTeam = team.sort((a, b) => {
+      if (a.officeNumber) {
+          return -1;
+      } else if (b.officeNumber) {
+          return 1;
+      } else if (a.github) {
+          return -1;
+      } else if (b.github) {
+          return 1;
+      } else {
+          return 0;
+      }
+  });
+  return sortedTeam
+}
+
 const generateHTML = (team) => {
   let html = `<!DOCTYPE html>
   <html lang="en">

@@ -2,11 +2,11 @@ const inquirer = require("inquirer");
 const { managerQuestions, buildTeam, engineerQuestions, internQuestions } = require('./utils/questions.js')
 const { Manager, Engineer, Intern } = require('./lib/classes.js');
 const generateHTML = require('./utils/HTMLgenerator')
-const team = []
 
 
 
 const createTeam = async function () {
+    let team = []
     try {
         const manager = await createManager();
         team.push(manager);
@@ -24,7 +24,8 @@ const createTeam = async function () {
                     } else {
                         const proceedAnswers = await askProceed(JSON.stringify(team));
                         if (proceedAnswers.proceed === "Create HTML") {
-                            console.log(`HTML file created! Please to to /dist to find the file.`)
+
+                            console.log(`HTML file created! Please go to /dist to find the file.`)
                             generateHTML(team)
                         }
                         break;
@@ -66,6 +67,7 @@ const createIntern = async function () {
     const { name, id, email, school } = internAnswers;
     return new Intern(name, id, email, school);
 }
+
 
 
 createTeam()
