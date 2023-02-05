@@ -39,7 +39,7 @@ const generateHTML = (team) => {
     if (member.getRole() === "Manager") {
       html += `
                 <div class="col-sm-12 d-flex justify-content-center">
-                    <div class="card mb-4">
+                <div class="card mb-4 px-0 col-12">
                         <div class="card-header bg-primary text-white">
                             ${member.name} - ${member.getRole()}
                         </div>
@@ -48,7 +48,7 @@ const generateHTML = (team) => {
                             <p>Email: <a href="mailto:${member.email}">${member.email}</a>
                             <p>Office Number: ${member.officeNumber}</p>
                          </p>
-                        </div>
+                         </div>
                     </div>
                 </div>`;
     } else {

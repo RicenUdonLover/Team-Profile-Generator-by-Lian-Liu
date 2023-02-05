@@ -1,1 +1,0 @@
-[{"name":"John","id":"001","email":"john@example.com","officeNumber":"001"},{"name":"Jim","id":"002","email":"jim@example.com","github":"Jim"},{"name":"Jack","id":"003","email":"jack@example.com","school":"UC Berkley"},{"name":"Luke","id":"004","email":"luke@example.com","github":"Luke"}]
