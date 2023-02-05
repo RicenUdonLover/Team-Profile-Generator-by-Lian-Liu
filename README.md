@@ -3,7 +3,7 @@
 
 ## Description
 
-This is a CLI that will generate a profile of a team by answering a sortserial questions.
+This is a CLI that will generate a profile of a team by answering a serial of questions.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ Type "npm i" to install dependencies,
 
 ## Usage
 
-This app will ask you to imput information of your team manager and team members. Then it will generate a HTML file that show the structure of your team.
+This app will ask you to input information of your team manager and team members. Then it will generate a HTML file that show the structure of your team.
 
 
 
