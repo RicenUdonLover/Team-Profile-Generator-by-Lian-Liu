@@ -32,6 +32,10 @@ Please folk your branch instead of making pull requests to main branch.
 
 Use "npm run test" to test the classes.
 
+## Walkthrough Video
+
+You can use this link to the walkthrough video: [Walkthrough Video](https://youtu.be/2QiVcbLy31Y).
+
 ## Questions
 
 For any questions, please contact me at [riceudon@gmail.com](mailto:riceudon@gmail.com). You can also check out my GitHub profile at [https://github.com/RicenUdonLover](https://github.com/RicenUdonLover).
